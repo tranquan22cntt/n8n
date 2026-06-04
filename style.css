@@ -413,16 +413,18 @@ ul {
 }
 
 .price {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 900;
   color: #111;
-  margin-bottom: 22px;
-  word-break: break-word;
+  margin-bottom: 20px;
   line-height: 1.2;
+  white-space: nowrap;
+  word-break: normal;
+  letter-spacing: -0.8px;
 }
 
 .price span {
-  font-size: 14px;
+  font-size: 13px;
   color: #777;
   font-weight: 600;
   white-space: nowrap;
@@ -794,4 +796,9 @@ ul {
   .compare-table td {
     padding: 14px 16px;
   }
+
+  .enterprise-price {
+  font-size: 26px;
+  white-space: nowrap;
+}
 }
