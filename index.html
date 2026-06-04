@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,9 +9,13 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -114,19 +119,21 @@
     <div class="container">
       <div class="section-title">
         <h2>Bảng giá dịch vụ n8n</h2>
-        <p>Chọn gói phù hợp với nhu cầu tự động hóa của bạn.</p>
+        <p>Dịch vụ trọn gói – Bao gồm hạ tầng Cloud, triển khai, bảo mật và hỗ trợ kỹ thuật tiếng Việt.</p>
       </div>
 
-      <div class="pricing-grid">
+      <div class="pricing-grid" id="pricingGrid">
         <div class="price-card">
           <h3>Starter</h3>
           <p class="price">1.900.000đ<span>/tháng</span></p>
+          <p class="price-note">Trọn gói – bao gồm hạ tầng & hỗ trợ</p>
 
           <ul>
-            <li>10 workflow</li>
+            <li>10 workflow hoạt động</li>
             <li>2.500 execution/tháng</li>
-            <li>AI Agent cơ bản</li>
-            <li>Hỗ trợ qua email</li>
+            <li>AI Agent cơ bản (GPT, Gemini)</li>
+            <li>Hỗ trợ qua email tiếng Việt</li>
+            <li>Sao lưu dữ liệu tự động</li>
           </ul>
 
           <a href="#contact" class="card-btn">Đăng ký</a>
@@ -137,12 +144,15 @@
 
           <h3>Professional</h3>
           <p class="price">4.900.000đ<span>/tháng</span></p>
+          <p class="price-note">Trọn gói – bao gồm hạ tầng & hỗ trợ ưu tiên</p>
 
           <ul>
-            <li>50 workflow</li>
+            <li>50 workflow hoạt động</li>
             <li>15.000 execution/tháng</li>
-            <li>AI Agent nâng cao</li>
-            <li>Hỗ trợ kỹ thuật ưu tiên</li>
+            <li>AI Agent nâng cao – xây dựng riêng</li>
+            <li>Tư vấn & thiết kế workflow cùng chuyên gia</li>
+            <li>Hỗ trợ kỹ thuật ưu tiên 24/7</li>
+            <li>Sao lưu & bảo mật nâng cao</li>
           </ul>
 
           <a href="#contact" class="card-btn">Đăng ký</a>
@@ -151,12 +161,15 @@
         <div class="price-card">
           <h3>Enterprise</h3>
           <p class="price">Liên hệ</p>
+          <p class="price-note">Hạ tầng riêng – tùy chỉnh toàn diện</p>
 
           <ul>
             <li>Không giới hạn workflow</li>
             <li>Execution theo nhu cầu</li>
-            <li>AI Agent tùy chỉnh</li>
-            <li>Hỗ trợ riêng cho doanh nghiệp</li>
+            <li>AI Agent tùy chỉnh chuyên sâu</li>
+            <li>Chuyên gia đồng hành triển khai</li>
+            <li>Hạ tầng cloud riêng biệt</li>
+            <li>SLA cam kết uptime 99.9%</li>
           </ul>
 
           <a href="#contact" class="card-btn">Liên hệ</a>
@@ -183,7 +196,7 @@
             </tr>
           </thead>
 
-          <tbody>
+          <tbody id="compareBody">
             <tr>
               <td>Số workflow</td>
               <td>10</td>
@@ -238,7 +251,7 @@
         <p>n8n giúp tự động hóa các công việc lặp lại và tối ưu vận hành doanh nghiệp.</p>
       </div>
 
-      <div class="benefits-grid">
+      <div class="benefits-grid" id="benefitsGrid">
         <div class="benefit-card">
           <div class="icon">🔗</div>
           <h3>Kết nối hơn 1000 ứng dụng</h3>
@@ -285,7 +298,7 @@
         <p>Một số câu hỏi phổ biến khi triển khai n8n cho doanh nghiệp.</p>
       </div>
 
-      <div class="faq-list">
+      <div class="faq-list" id="faqList">
         <div class="faq-item">
           <h3>n8n là gì?</h3>
           <p>n8n là nền tảng tự động hóa workflow, giúp kết nối nhiều ứng dụng và xử lý công việc tự động.</p>
@@ -322,12 +335,12 @@
           <p>Để lại thông tin, đội ngũ tư vấn sẽ liên hệ và đề xuất gói n8n phù hợp nhất.</p>
         </div>
 
-        <form class="contact-form">
-          <input type="text" placeholder="Họ và tên" required />
-          <input type="email" placeholder="Email" required />
-          <input type="tel" placeholder="Số điện thoại" required />
-          <textarea placeholder="Nhu cầu của bạn"></textarea>
-          <button type="submit">Nhận tư vấn ngay</button>
+        <form class="contact-form" id="contactForm">
+          <input type="text" id="from_name" placeholder="Họ và tên" required />
+          <input type="email" id="from_email" placeholder="Email" required />
+          <input type="tel" id="from_phone" placeholder="Số điện thoại" required />
+          <textarea id="message" placeholder="Nhu cầu của bạn"></textarea>
+          <button type="submit" id="submitBtn">Nhận tư vấn ngay</button>
         </form>
       </div>
     </div>
@@ -341,4 +354,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

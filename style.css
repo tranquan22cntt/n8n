@@ -367,7 +367,7 @@ ul {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -379,6 +379,8 @@ ul {
   padding: 32px;
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.05);
   transition: 0.25s;
+  display: flex;
+  flex-direction: column;
 }
 
 .price-card:hover {
@@ -411,16 +413,31 @@ ul {
 }
 
 .price {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 900;
   color: #111;
   margin-bottom: 22px;
+  word-break: break-word;
+  line-height: 1.2;
 }
 
 .price span {
-  font-size: 15px;
+  font-size: 14px;
   color: #777;
   font-weight: 600;
+  white-space: nowrap;
+}
+
+.price-note {
+  font-size: 13px;
+  color: #ff6d5a;
+  font-weight: 600;
+  background: rgba(255, 109, 90, 0.08);
+  border: 1px solid rgba(255, 109, 90, 0.18);
+  padding: 8px 14px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .price-card ul {
