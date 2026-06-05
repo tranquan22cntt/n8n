@@ -172,6 +172,29 @@ menuLinks.forEach(function (link) {
     if (targetSection) {
       event.preventDefault();
       targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      // Close mobile menu if open
+      var mobileMenu = document.getElementById("mobileMenu");
+      var hamburgerBtn = document.getElementById("hamburgerBtn");
+      if (mobileMenu) mobileMenu.classList.remove("active");
+      if (hamburgerBtn) {
+        hamburgerBtn.classList.remove("active");
+        hamburgerBtn.setAttribute("aria-expanded", "false");
+      }
     }
   });
 });
+
+// =============================================
+// HAMBURGER MENU (MOBILE)
+// =============================================
+var hamburgerBtn = document.getElementById("hamburgerBtn");
+var mobileMenu = document.getElementById("mobileMenu");
+
+if (hamburgerBtn && mobileMenu) {
+  hamburgerBtn.addEventListener("click", function () {
+    var isOpen = mobileMenu.classList.toggle("active");
+    hamburgerBtn.classList.toggle("active");
+    hamburgerBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+}
