@@ -374,6 +374,10 @@ ul {
   animation: floatY 4s ease-in-out infinite;
 }
 
+.floating-cards-row {
+  display: contents;
+}
+
 .floating-card strong {
   display: block;
   font-size: 22px;
@@ -792,7 +796,8 @@ ul {
   }
 
   .hero-right {
-    min-height: 360px;
+    min-height: auto;
+    position: static;
   }
 
   .main-card {
@@ -800,14 +805,23 @@ ul {
     max-width: 100%;
   }
 
-  .floating-card-1 {
-    left: 20px;
-    bottom: 10px;
+  .floating-cards-row {
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
   }
 
+  .floating-card {
+    position: static;
+    animation: none;
+    flex: 1;
+  }
+
+  .floating-card-1,
   .floating-card-2 {
-    right: 20px;
-    bottom: -10px;
+    left: auto;
+    right: auto;
+    bottom: auto;
   }
 
   .pricing-grid,
