@@ -25,7 +25,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
@@ -152,6 +152,7 @@
         <div class="pricing-grid" id="pricingGrid">
           <div class="price-card">
             <h3>Starter</h3>
+            <p class="plan-desc">Phù hợp để bắt đầu tự động hóa và kiểm chứng hiệu quả với n8n.</p>
             <p class="price">2.500.000đ<span>/tháng</span></p>
             <p class="price-note">Trọn gói – bao gồm hạ tầng &amp; hỗ trợ</p>
 
@@ -170,6 +171,7 @@
             <div class="popular-label">Phổ biến</div>
 
             <h3>Professional</h3>
+            <p class="plan-desc">Dành cho đội nhóm cần chạy workflow ổn định trong vận hành thật.</p>
             <p class="price">4.200.000đ<span>/tháng</span></p>
             <p class="price-note">Trọn gói – bao gồm hạ tầng &amp; hỗ trợ ưu tiên</p>
 
@@ -187,6 +189,7 @@
 
           <div class="price-card">
             <h3>Enterprise</h3>
+            <p class="plan-desc">Dành cho tổ chức cần hạ tầng riêng, bảo mật và tuân thủ nâng cao.</p>
             <p class="price enterprise-price">Liên hệ với chúng tôi</p>
             <p class="price-note">Hạ tầng riêng – tùy chỉnh toàn diện</p>
 
@@ -212,61 +215,57 @@
           <p>Xem nhanh sự khác biệt giữa các gói dịch vụ n8n.</p>
         </div>
 
-        <div class="table-wrapper">
-          <table class="compare-table">
-            <thead>
-              <tr>
-                <th scope="col">Tính năng</th>
-                <th scope="col">Starter</th>
-                <th scope="col">Professional</th>
-                <th scope="col">Enterprise</th>
-              </tr>
-            </thead>
+        <div class="compare-groups">
+          <div class="compare-card">
+            <div class="compare-row compare-head">
+              <h3>So sánh tính năng</h3>
+              <span>Starter</span>
+              <span>Professional</span>
+              <span>Enterprise</span>
+            </div>
 
-            <tbody id="compareBody">
-              <tr>
-                <td>Giá</td>
-                <td>2.500.000đ/tháng</td>
-                <td>4.200.000đ/tháng</td>
-                <td>Liên hệ</td>
-              </tr>
+            <div class="compare-row">
+              <span class="feature-name">Giá</span>
+              <span>2.500.000đ/tháng</span>
+              <span>4.200.000đ/tháng</span>
+              <span>Liên hệ</span>
+            </div>
 
-              <tr>
-                <td>Execution mỗi tháng</td>
-                <td>2.500</td>
-                <td>15.000</td>
-                <td>Theo nhu cầu</td>
-              </tr>
+            <div class="compare-row">
+              <span class="feature-name">Execution mỗi tháng</span>
+              <span>2.500</span>
+              <span>15.000</span>
+              <span>Theo nhu cầu</span>
+            </div>
 
-              <tr>
-                <td>AI Agent</td>
-                <td>Cơ bản</td>
-                <td>Nâng cao</td>
-                <td>Tùy chỉnh riêng</td>
-              </tr>
+            <div class="compare-row">
+              <span class="feature-name">AI Agent</span>
+              <span>Cơ bản</span>
+              <span>Nâng cao</span>
+              <span>Tùy chỉnh riêng</span>
+            </div>
 
-              <tr>
-                <td>Tích hợp CRM, Email, Google Sheet</td>
-                <td>Có</td>
-                <td>Có</td>
-                <td>Có</td>
-              </tr>
+            <div class="compare-row">
+              <span class="feature-name">Tích hợp CRM, Email, Google Sheet</span>
+              <span class="check-mark">✓</span>
+              <span class="check-mark">✓</span>
+              <span class="check-mark">✓</span>
+            </div>
 
-              <tr>
-                <td>Hỗ trợ kỹ thuật</td>
-                <td>Email</td>
-                <td>Ưu tiên</td>
-                <td>Riêng cho doanh nghiệp</td>
-              </tr>
+            <div class="compare-row">
+              <span class="feature-name">Hỗ trợ kỹ thuật</span>
+              <span>Email</span>
+              <span>Ưu tiên</span>
+              <span>Riêng cho doanh nghiệp</span>
+            </div>
 
-              <tr>
-                <td>Tư vấn triển khai</td>
-                <td>Không</td>
-                <td>Có</td>
-                <td>Có chuyên gia đồng hành</td>
-              </tr>
-            </tbody>
-          </table>
+            <div class="compare-row">
+              <span class="feature-name">Tư vấn triển khai</span>
+              <span>Không</span>
+              <span>Có</span>
+              <span>Có chuyên gia đồng hành</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -296,7 +295,6 @@
             <h3>Tích hợp AI Agent</h3>
             <p>Kết hợp AI để phân tích dữ liệu, trả lời khách hàng và hỗ trợ ra quyết định nhanh hơn.</p>
           </div>
-
           <div class="benefit-card">
             <div class="icon" role="img" aria-label="Tiết kiệm thời gian">⏱️</div>
             <h3>Tiết kiệm thời gian</h3>
@@ -319,36 +317,66 @@
     </section>
 
     <section id="faq" class="section faq-section" aria-labelledby="faq-heading">
-      <div class="container">
-        <div class="section-title">
+      <div class="container faq-layout">
+        <div class="faq-heading">
+          <span class="faq-badge">FAQs</span>
           <h2 id="faq-heading">Câu hỏi thường gặp</h2>
-          <p>Các câu hỏi phổ biến khi chọn n8n Cloud, self-host hoặc triển khai cho doanh nghiệp.</p>
         </div>
 
         <div class="faq-list" id="faqList">
           <div class="faq-item">
-            <h3>n8n là gì?</h3>
-            <p>n8n là nền tảng workflow automation cho phép kết nối ứng dụng, xử lý dữ liệu, thêm AI Agent và kiểm soát logic tự động hóa trên một canvas trực quan.</p>
+            <h3>Gói dùng thử n8n bao gồm những gì?</h3>
+            <p>Bạn có thể bắt đầu với một workflow mẫu, kết nối ứng dụng phổ biến và nhận tư vấn để chọn cách triển khai phù hợp.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Execution là gì và vì sao quan trọng?</h3>
+            <p>Execution là mỗi lần workflow chạy. Theo dõi execution giúp bạn kiểm soát chi phí, hiệu suất và mức độ tự động hóa thực tế.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Làm sao ước tính số execution mỗi tháng?</h3>
+            <p>Chúng tôi sẽ dựa trên số workflow, tần suất chạy, số khách hàng hoặc số bản ghi xử lý để đề xuất gói phù hợp.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Tôi có thể xem workflow đã chạy bao nhiêu lần không?</h3>
+            <p>Có. n8n có log, lịch sử chạy và dữ liệu đầu ra để đội ngũ dễ kiểm tra từng bước xử lý.</p>
           </div>
 
           <div class="faq-item">
             <h3>Nên dùng n8n Cloud hay self-host?</h3>
-            <p>n8n Cloud phù hợp khi bạn muốn bắt đầu nhanh và không tự quản hạ tầng. Self-host phù hợp khi doanh nghiệp cần kiểm soát dữ liệu, mạng nội bộ, bảo mật hoặc tích hợp hệ thống riêng.</p>
+            <p>Cloud phù hợp để bắt đầu nhanh. Self-host phù hợp khi bạn cần kiểm soát dữ liệu, mạng nội bộ hoặc yêu cầu bảo mật riêng.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Gói doanh nghiệp có hỗ trợ riêng không?</h3>
+            <p>Có. Gói Enterprise có thể bao gồm tư vấn kiến trúc, hỗ trợ kỹ thuật riêng, SLA và triển khai theo yêu cầu.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Khác nhau giữa hỗ trợ qua email và hỗ trợ ưu tiên là gì?</h3>
+            <p>Hỗ trợ ưu tiên có thời gian phản hồi nhanh hơn, phù hợp với workflow quan trọng đang chạy trong vận hành thật.</p>
           </div>
 
           <div class="faq-item">
             <h3>n8n có hỗ trợ AI Agent không?</h3>
-            <p>Có. n8n có thể kết nối các mô hình AI, dữ liệu nội bộ, công cụ bên ngoài và các bước phê duyệt để tạo workflow AI có thể theo dõi và kiểm soát.</p>
+            <p>Có. n8n có thể kết nối mô hình AI, dữ liệu nội bộ, API và bước phê duyệt để tạo AI Agent có thể kiểm soát.</p>
           </div>
 
           <div class="faq-item">
-            <h3>Khi nào nên chọn gói Enterprise?</h3>
-            <p>Enterprise phù hợp với đội ngũ cần SSO, phân quyền, audit log, yêu cầu SLA, môi trường riêng hoặc triển khai nhiều workflow quan trọng cho vận hành doanh nghiệp.</p>
+            <h3>Sau khi đăng ký thì quy trình triển khai diễn ra thế nào?</h3>
+            <p>Chúng tôi khảo sát nhu cầu, chọn workflow ưu tiên, cấu hình hạ tầng, triển khai, kiểm thử và bàn giao tài liệu vận hành.</p>
           </div>
 
           <div class="faq-item">
-            <h3>Đội ngũ kỹ thuật có cần biết code không?</h3>
-            <p>Không bắt buộc cho các workflow cơ bản. Với các quy trình phức tạp, n8n vẫn cho phép thêm JavaScript, Python hoặc API tùy chỉnh để mở rộng mà không bị giới hạn bởi giao diện kéo thả.</p>
+            <h3>Một gói có thể dùng cho bao nhiêu workflow?</h3>
+            <p>Số workflow phụ thuộc vào từng gói. Nếu nhu cầu tăng, bạn có thể nâng cấp hoặc chuyển sang cấu hình riêng.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Nếu vượt quota execution thì chuyện gì xảy ra?</h3>
+            <p>Đội ngũ sẽ thông báo để bạn tối ưu workflow, nâng gói hoặc bổ sung execution theo nhu cầu thực tế.</p>
           </div>
         </div>
       </div>
