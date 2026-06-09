@@ -55,7 +55,7 @@ ul {
   position: sticky;
   top: 0;
   z-index: 99;
-  padding: 2px 0 0;
+  padding: 10px 0 6px;
   background: linear-gradient(180deg, rgba(12, 8, 23, 0.98), rgba(12, 8, 23, 0.58) 82%, transparent);
 }
 
@@ -275,18 +275,88 @@ ul {
   min-height: 650px;
   padding: 56px 0 42px;
   background: #0c0817;
-  isolation: isolate;
 }
+
+/* ── Animated color orbs (n8n.io style) ── */
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 3;
+  will-change: transform;
+}
+
+.orb-1 {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(255, 79, 56, 0.75) 0%, rgba(255, 40, 10, 0.3) 50%, transparent 75%);
+  top: -250px;
+  left: -180px;
+  animation: orbFloat1 14s ease-in-out infinite alternate;
+}
+
+.orb-2 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(139, 58, 237, 0.65) 0%, rgba(109, 40, 217, 0.25) 50%, transparent 75%);
+  top: -150px;
+  right: -120px;
+  animation: orbFloat2 18s ease-in-out infinite alternate;
+}
+
+.orb-3 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.5) 0%, rgba(37, 99, 235, 0.18) 50%, transparent 75%);
+  bottom: -50px;
+  left: 15%;
+  animation: orbFloat3 12s ease-in-out infinite alternate;
+}
+
+.orb-4 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(255, 160, 60, 0.55) 0%, rgba(255, 100, 30, 0.2) 50%, transparent 75%);
+  bottom: -80px;
+  right: 10%;
+  animation: orbFloat4 16s ease-in-out infinite alternate;
+}
+
+@keyframes orbFloat1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(100px, 80px) scale(1.12); }
+  66%  { transform: translate(40px, 140px) scale(0.95); }
+  100% { transform: translate(120px, 50px) scale(1.08); }
+}
+
+@keyframes orbFloat2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(-80px, 100px) scale(1.15); }
+  66%  { transform: translate(-120px, 40px) scale(0.9); }
+  100% { transform: translate(-50px, 120px) scale(1.1); }
+}
+
+@keyframes orbFloat3 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-100px, -80px) scale(1.2); }
+  100% { transform: translate(80px, -40px) scale(0.88); }
+}
+
+@keyframes orbFloat4 {
+  0%   { transform: translate(0, 0) scale(1); }
+  40%  { transform: translate(60px, -90px) scale(1.15); }
+  100% { transform: translate(-50px, -120px) scale(0.92); }
+}
+
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 48% 38% at 66% 98%, rgba(255, 79, 56, 0.2), transparent 66%),
-    linear-gradient(90deg, #0c0817 0%, rgba(12, 8, 23, 0.96) 38%, rgba(12, 8, 23, 0.42) 74%, rgba(12, 8, 23, 0.72) 100%);
+  background: linear-gradient(100deg, rgba(12, 8, 23, 0.7) 0%, rgba(12, 8, 23, 0.2) 45%, transparent 100%);
   pointer-events: none;
-  animation: heroGlow 8s ease-in-out infinite alternate;
+  z-index: 2;
 }
 
 .hero-art {
@@ -297,6 +367,7 @@ ul {
   background-repeat: no-repeat;
   background-size: auto 100%;
   opacity: 0.95;
+  z-index: 0;
 }
 
 .hero-art::before {
@@ -638,7 +709,7 @@ ul {
 
 .hero-shell {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1328,9 +1399,15 @@ ul {
   background: rgba(255, 255, 255, 0.02);
 }
 
-.compare-table td:first-child {
+.compare-table td:first-child,
+.compare-table th:first-child {
   font-weight: 600;
   color: rgba(255, 255, 255, 0.8);
+  position: sticky;
+  left: 0;
+  background: #0f0c1e;
+  z-index: 1;
+  min-width: 160px;
 }
 
 /* =============================================
