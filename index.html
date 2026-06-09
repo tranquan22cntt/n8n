@@ -35,13 +35,24 @@
 
   <header class="header" role="banner">
     <div class="container nav">
-      <a href="#" class="logo" aria-label="Trang chủ - Tự động hóa n8n">Tự động hóa <span>n8n</span></a>
+      <a href="#" class="logo" aria-label="Trang chủ - n8n">
+        <svg class="logo-icon" viewBox="0 0 64 28" aria-hidden="true" focusable="false">
+          <circle cx="8" cy="16" r="4"></circle>
+          <circle cx="24" cy="16" r="4"></circle>
+          <circle cx="40" cy="8" r="4"></circle>
+          <circle cx="52" cy="20" r="4"></circle>
+          <path d="M12 16H20M28 16L36 10M44 10L50 17M44 8H56"></path>
+        </svg>
+        <span>n8n</span>
+      </a>
 
       <nav class="menu" aria-label="Điều hướng chính">
-        <a href="#pricing">Bảng giá</a>
-        <a href="#features">Lợi ích</a>
-        <a href="#compare">So sánh</a>
-        <a href="#faq">Câu hỏi thường gặp</a>
+        <a href="#features" class="menu-link has-chevron">Sản phẩm</a>
+        <a href="#compare" class="menu-link has-chevron">Ứng dụng</a>
+        <a href="https://docs.n8n.io/" class="menu-link has-chevron" target="_blank" rel="noopener">Tài liệu</a>
+        <a href="#faq" class="menu-link has-chevron">Cộng đồng</a>
+        <a href="#contact" class="menu-link">Doanh nghiệp</a>
+        <a href="#pricing" class="menu-link">Bảng giá</a>
       </nav>
 
       <button class="hamburger" id="hamburgerBtn" aria-label="Mở menu điều hướng" aria-expanded="false">
@@ -50,27 +61,37 @@
         <span></span>
       </button>
 
-      <a href="#contact" class="nav-btn">Liên hệ tư vấn</a>
+      <div class="nav-actions">
+        <a href="https://github.com/n8n-io/n8n" class="github-badge" target="_blank" rel="noopener" aria-label="n8n GitHub stars">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 .5a12 12 0 0 0-3.8 23.39c.6.11.82-.26.82-.58v-2.04c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.09 1.84 1.24 1.84 1.24 1.08 1.84 2.82 1.31 3.51 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.43 11.43 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"></path>
+          </svg>
+          <span>191,615</span>
+        </a>
+        <a href="https://app.n8n.cloud/" class="signin-link" target="_blank" rel="noopener">Đăng nhập</a>
+        <a href="#contact" class="nav-btn">Bắt đầu</a>
+      </div>
     </div>
 
     <!-- Mobile menu overlay -->
     <nav class="mobile-menu" id="mobileMenu" aria-label="Menu di động">
+      <a href="#features">Sản phẩm</a>
+      <a href="#compare">Ứng dụng</a>
+      <a href="https://docs.n8n.io/" target="_blank" rel="noopener">Tài liệu</a>
+      <a href="#faq">Cộng đồng</a>
+      <a href="#contact">Doanh nghiệp</a>
       <a href="#pricing">Bảng giá</a>
-      <a href="#features">Lợi ích</a>
-      <a href="#compare">So sánh</a>
-      <a href="#faq">Câu hỏi thường gặp</a>
-      <a href="#contact" class="mobile-cta">Liên hệ tư vấn</a>
+      <a href="https://app.n8n.cloud/" target="_blank" rel="noopener">Đăng nhập</a>
+      <a href="#contact" class="mobile-cta">Bắt đầu</a>
     </nav>
   </header>
 
   <main id="main-content">
 
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-bg hero-bg-1"></div>
-      <div class="hero-bg hero-bg-2"></div>
-
-      <div class="container hero-wrap">
-        <div class="hero-left">
+      <div class="hero-art" aria-hidden="true"></div>
+      <div class="container hero-shell">
+        <div class="hero-copy">
           <span class="badge">AI Workflow Automation cho doanh nghiệp Việt Nam</span>
 
           <h1 id="hero-heading">Tự động hóa công việc với <span>n8n</span></h1>
@@ -103,34 +124,13 @@
           </div>
         </div>
 
-        <div class="hero-right">
-          <div class="hero-card main-card">
-            <div class="mini-label">Workflow đang chạy</div>
-
-            <h2 class="hero-card-title">Lead → CRM → Email → AI Agent</h2>
-
-            <p>
-              Tự động nhận lead, phân loại khách hàng, gửi email và kích hoạt AI Agent xử lý.
-            </p>
-
-            <div class="flow-line" role="img" aria-label="Quy trình: Form đến CRM đến Email đến AI">
-              <span>Form</span>
-              <span>CRM</span>
-              <span>Email</span>
-              <span>AI</span>
-            </div>
-          </div>
-
-          <div class="floating-cards-row">
-            <div class="floating-card floating-card-1">
-              <strong>+35%</strong>
-              <span>Tăng hiệu suất xử lý</span>
-            </div>
-
-            <div class="floating-card floating-card-2">
-              <strong>-50%</strong>
-              <span>Giảm thao tác thủ công</span>
-            </div>
+        <div class="hero-trust" aria-label="Doanh nghiệp và đội ngũ sử dụng tự động hóa workflow">
+          <p>Nền tảng tự động hóa quy trình phổ biến cho đội ngũ kỹ thuật, vận hành và tăng trưởng</p>
+          <div class="trust-logos">
+            <span>Meta</span>
+            <span>SEAT</span>
+            <span>Zendesk</span>
+            <span>Paddle</span>
           </div>
         </div>
       </div>
@@ -327,33 +327,33 @@
       <div class="container">
         <div class="section-title">
           <h2 id="faq-heading">Câu hỏi thường gặp</h2>
-          <p>Một số câu hỏi phổ biến khi triển khai n8n cho doanh nghiệp.</p>
+          <p>Các câu hỏi phổ biến khi chọn n8n Cloud, self-host hoặc triển khai cho doanh nghiệp.</p>
         </div>
 
         <div class="faq-list" id="faqList">
           <div class="faq-item">
             <h3>n8n là gì?</h3>
-            <p>n8n là nền tảng tự động hóa workflow, giúp kết nối nhiều ứng dụng và xử lý công việc tự động.</p>
+            <p>n8n là nền tảng workflow automation cho phép kết nối ứng dụng, xử lý dữ liệu, thêm AI Agent và kiểm soát logic tự động hóa trên một canvas trực quan.</p>
           </div>
 
           <div class="faq-item">
-            <h3>Gói Starter phù hợp với ai?</h3>
-            <p>Gói Starter phù hợp với cá nhân, startup nhỏ hoặc doanh nghiệp mới bắt đầu tự động hóa quy trình.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Có thể thay đổi gói sau khi đăng ký không?</h3>
-            <p>Có. Bạn có thể nâng cấp lên gói cao hơn khi nhu cầu workflow và execution tăng lên.</p>
+            <h3>Nên dùng n8n Cloud hay self-host?</h3>
+            <p>n8n Cloud phù hợp khi bạn muốn bắt đầu nhanh và không tự quản hạ tầng. Self-host phù hợp khi doanh nghiệp cần kiểm soát dữ liệu, mạng nội bộ, bảo mật hoặc tích hợp hệ thống riêng.</p>
           </div>
 
           <div class="faq-item">
             <h3>n8n có hỗ trợ AI Agent không?</h3>
-            <p>Có. Các gói đều có hỗ trợ AI Agent, tuy nhiên mức độ tùy chỉnh sẽ khác nhau theo từng gói.</p>
+            <p>Có. n8n có thể kết nối các mô hình AI, dữ liệu nội bộ, công cụ bên ngoài và các bước phê duyệt để tạo workflow AI có thể theo dõi và kiểm soát.</p>
           </div>
 
           <div class="faq-item">
-            <h3>Tôi có được hỗ trợ kỹ thuật không?</h3>
-            <p>Có. Mỗi gói đều có hình thức hỗ trợ khác nhau như email, ưu tiên hoặc hỗ trợ riêng cho doanh nghiệp.</p>
+            <h3>Khi nào nên chọn gói Enterprise?</h3>
+            <p>Enterprise phù hợp với đội ngũ cần SSO, phân quyền, audit log, yêu cầu SLA, môi trường riêng hoặc triển khai nhiều workflow quan trọng cho vận hành doanh nghiệp.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Đội ngũ kỹ thuật có cần biết code không?</h3>
+            <p>Không bắt buộc cho các workflow cơ bản. Với các quy trình phức tạp, n8n vẫn cho phép thêm JavaScript, Python hoặc API tùy chỉnh để mở rộng mà không bị giới hạn bởi giao diện kéo thả.</p>
           </div>
         </div>
       </div>
@@ -363,8 +363,8 @@
       <div class="container">
         <div class="cta-box">
           <div class="cta-content">
-            <h2 id="contact-heading">Sẵn sàng tự động hóa doanh nghiệp của bạn?</h2>
-            <p>Để lại thông tin, đội ngũ tư vấn sẽ liên hệ và đề xuất gói n8n phù hợp nhất.</p>
+            <h2 id="contact-heading">Đủ trực quan để nhìn rõ. Đủ mạnh để triển khai.</h2>
+            <p>Bắt đầu với một workflow quan trọng, đo hiệu quả thật và mở rộng dần sang CRM, marketing, vận hành, báo cáo hoặc AI Agent.</p>
           </div>
 
           <form class="contact-form" id="contactForm" aria-label="Form liên hệ tư vấn">
@@ -380,7 +380,7 @@
             <label for="message" class="sr-only">Nhu cầu của bạn</label>
             <textarea id="message" name="message" placeholder="Nhu cầu của bạn"></textarea>
 
-            <button type="submit" id="submitBtn">Nhận tư vấn ngay</button>
+            <button type="submit" id="submitBtn">Bắt đầu xây workflow</button>
           </form>
         </div>
       </div>

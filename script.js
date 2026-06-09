@@ -142,7 +142,7 @@ if (contactForm) {
       })
       .finally(function () {
         submitBtn.disabled = false;
-        submitBtn.textContent = "Nhận tư vấn ngay";
+        submitBtn.textContent = "Bắt đầu xây workflow";
       });
   });
 }
