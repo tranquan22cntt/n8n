@@ -162,6 +162,38 @@ function bindFaqEvents() {
 bindFaqEvents();
 
 // =============================================
+// HIEU UNG XUAT HIEN KHI CUON
+// =============================================
+var revealSections = document.querySelectorAll(".brand-strip, main > .section");
+
+if ("IntersectionObserver" in window) {
+  var revealObserver = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        } else {
+          entry.target.classList.remove("is-visible");
+        }
+      });
+    },
+    {
+      threshold: 0.18,
+      rootMargin: "0px 0px -8% 0px",
+    }
+  );
+
+  revealSections.forEach(function (section) {
+    section.classList.add("scroll-page");
+    revealObserver.observe(section);
+  });
+} else {
+  revealSections.forEach(function (section) {
+    section.classList.add("is-visible");
+  });
+}
+
+// =============================================
 // CUỘN MƯỢT
 // =============================================
 var menuLinks = document.querySelectorAll('a[href^="#"]');
