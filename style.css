@@ -2007,6 +2007,19 @@ ul {
   background: rgba(255, 79, 56, 0.04);
 }
 
+.contact-form input:-webkit-autofill,
+.contact-form input:-webkit-autofill:hover,
+.contact-form input:-webkit-autofill:focus,
+.contact-form textarea:-webkit-autofill,
+.contact-form textarea:-webkit-autofill:hover,
+.contact-form textarea:-webkit-autofill:focus {
+  border-color: rgba(255, 255, 255, 0.14);
+  -webkit-text-fill-color: #fff;
+  caret-color: #fff;
+  box-shadow: 0 0 0 1000px #8d351f inset;
+  transition: background-color 9999s ease-out, color 9999s ease-out;
+}
+
 .contact-form textarea {
   min-height: 90px;
   resize: vertical;
