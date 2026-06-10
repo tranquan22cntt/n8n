@@ -1877,11 +1877,32 @@ ul {
   display: grid;
   gap: 28px;
   overflow-x: auto;
-  padding-bottom: 4px;
+  overflow-y: hidden;
+  padding: 0 2px 12px;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  touch-action: pan-x pan-y;
+  scrollbar-color: rgba(255, 107, 74, 0.72) rgba(255, 255, 255, 0.08);
+  scrollbar-width: thin;
+}
+
+.compare-groups::-webkit-scrollbar {
+  height: 8px;
+}
+
+.compare-groups::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+}
+
+.compare-groups::-webkit-scrollbar-thumb {
+  background: rgba(255, 107, 74, 0.8);
+  border-radius: 999px;
 }
 
 .compare-card {
-  overflow: hidden;
+  min-width: 940px;
+  overflow: clip;
   border-radius: 22px;
   background: rgba(34, 28, 45, 0.86);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1891,7 +1912,6 @@ ul {
   display: grid;
   grid-template-columns: minmax(240px, 1.45fr) repeat(4, minmax(105px, 0.62fr));
   align-items: center;
-  min-width: 940px;
   min-height: 56px;
   padding: 0 24px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
@@ -1922,15 +1942,17 @@ ul {
   text-align: center;
 }
 
-.compare-table td:first-child,
-.compare-table th:first-child {
+.compare-row>*:first-child {
   font-weight: 600;
   color: rgba(255, 255, 255, 0.8);
   position: sticky;
   left: 0;
-  background: #0f0c1e;
+  background: linear-gradient(90deg, rgba(34, 28, 45, 0.98) 84%, rgba(34, 28, 45, 0));
   z-index: 1;
-  min-width: 160px;
+  min-width: 210px;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
 }
 
 .feature-name {
