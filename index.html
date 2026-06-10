@@ -49,7 +49,8 @@
       <nav class="menu" aria-label="Điều hướng chính">
         <a href="#features" class="menu-link">Sản phẩm</a>
         <a href="#compare" class="menu-link">Ứng dụng</a>
-        <a href="#faq" class="menu-link">Cộng đồng</a>
+        <a href="#faq" class="menu-link">Tài liệu</a>
+        <a href="#features" class="menu-link">Cộng đồng</a>
         <a href="#contact" class="menu-link">Doanh nghiệp</a>
         <a href="#pricing" class="menu-link">Bảng giá</a>
       </nav>
@@ -69,17 +70,22 @@
     <nav class="mobile-menu" id="mobileMenu" aria-label="Menu di động">
       <a href="#features">Sản phẩm</a>
       <a href="#compare">Ứng dụng</a>
-      <a href="#faq">Cộng đồng</a>
+      <a href="#faq">Tài liệu</a>
+      <a href="#features">Cộng đồng</a>
       <a href="#contact">Doanh nghiệp</a>
       <a href="#pricing">Bảng giá</a>
-      <a href="#contact" class="mobile-cta">Liên hệ tư vấn</a>
+      <a href="#contact" class="mobile-cta">Bắt đầu</a>
     </nav>
   </header>
 
   <main id="main-content">
 
     <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-art" aria-hidden="true"></div>
+      <div class="hero-art" aria-hidden="true">
+        <span class="hero-smoke smoke-orange"></span>
+        <span class="hero-smoke smoke-blue"></span>
+        <span class="hero-smoke smoke-violet"></span>
+      </div>
       <!-- Animated color orbs like n8n.io -->
       <div class="hero-orb orb-1" aria-hidden="true"></div>
       <div class="hero-orb orb-2" aria-hidden="true"></div>
@@ -151,58 +157,124 @@
 
         <div class="pricing-grid" id="pricingGrid">
           <div class="price-card">
-            <h3>Starter</h3>
-            <p class="plan-desc">Phù hợp để bắt đầu tự động hóa và kiểm chứng hiệu quả với n8n.</p>
-            <p class="price">2.500.000đ<span>/tháng</span></p>
-            <p class="price-note">Trọn gói – bao gồm hạ tầng &amp; hỗ trợ</p>
+            <div class="plan-top">
+              <h3>Starter</h3>
+              <p class="plan-desc">Phù hợp để bắt đầu tự động hóa và kiểm chứng hiệu quả với n8n.</p>
+            </div>
 
-            <ul>
+            <p class="price">2.500.000đ<span>/tháng</span></p>
+
+            <div class="execution-box">
+              <strong>2.5k</strong>
+              <span>workflow executions<br>mỗi tháng</span>
+            </div>
+
+            <a href="#contact" class="card-btn">Bắt đầu dùng thử</a>
+
+            <div class="deploy-row">
+              <span class="deploy-icon">☁</span>
+              <span>Hosted bởi đội ngũ triển khai</span>
+            </div>
+
+            <p class="plan-includes">Gói này bao gồm:</p>
+            <ul class="plan-feature-list">
               <li>10 workflow hoạt động</li>
-              <li>2.500 execution/tháng</li>
               <li>AI Agent cơ bản (GPT, Gemini)</li>
               <li>Hỗ trợ qua email tiếng Việt</li>
               <li>Sao lưu dữ liệu tự động</li>
             </ul>
-
-            <a href="#contact" class="card-btn">Đăng ký</a>
           </div>
 
           <div class="price-card popular">
             <div class="popular-label">Phổ biến</div>
 
-            <h3>Professional</h3>
-            <p class="plan-desc">Dành cho đội nhóm cần chạy workflow ổn định trong vận hành thật.</p>
-            <p class="price">4.200.000đ<span>/tháng</span></p>
-            <p class="price-note">Trọn gói – bao gồm hạ tầng &amp; hỗ trợ ưu tiên</p>
+            <div class="plan-top">
+              <h3>Professional</h3>
+              <p class="plan-desc">Dành cho đội nhóm cần chạy workflow ổn định trong vận hành thật.</p>
+            </div>
 
-            <ul>
+            <p class="price">4.200.000đ<span>/tháng</span></p>
+
+            <div class="execution-box">
+              <strong>15k</strong>
+              <span>workflow executions<br>mỗi tháng</span>
+            </div>
+
+            <a href="#contact" class="card-btn">Đăng ký tư vấn</a>
+
+            <div class="deploy-row">
+              <span class="deploy-icon">☁</span>
+              <span>Hosted bởi đội ngũ triển khai</span>
+            </div>
+
+            <p class="plan-includes">Bao gồm Starter, cộng thêm:</p>
+            <ul class="plan-feature-list">
               <li>50 workflow hoạt động</li>
-              <li>15.000 execution/tháng</li>
               <li>AI Agent nâng cao – xây dựng riêng</li>
-              <li>Tư vấn &amp; thiết kế workflow cùng chuyên gia</li>
+              <li>Tư vấn thiết kế workflow cùng chuyên gia</li>
               <li>Hỗ trợ kỹ thuật ưu tiên 24/7</li>
               <li>Sao lưu &amp; bảo mật nâng cao</li>
             </ul>
-
-            <a href="#contact" class="card-btn">Đăng ký</a>
           </div>
 
           <div class="price-card">
-            <h3>Enterprise</h3>
-            <p class="plan-desc">Dành cho tổ chức cần hạ tầng riêng, bảo mật và tuân thủ nâng cao.</p>
-            <p class="price enterprise-price">Liên hệ với chúng tôi</p>
-            <p class="price-note">Hạ tầng riêng – tùy chỉnh toàn diện</p>
+            <div class="plan-top">
+              <h3>Business</h3>
+              <p class="plan-desc">Cho doanh nghiệp cần cộng tác, báo cáo và mở rộng nhiều phòng ban.</p>
+            </div>
 
-            <ul>
-              <li>Không giới hạn workflow</li>
-              <li>Execution theo nhu cầu</li>
+            <p class="price">7.900.000đ<span>/tháng</span></p>
+
+            <div class="execution-box">
+              <strong>40k</strong>
+              <span>workflow executions<br>mỗi tháng</span>
+            </div>
+
+            <a href="#contact" class="card-btn">Nhận tư vấn miễn phí</a>
+
+            <div class="deploy-row">
+              <span class="deploy-icon">▣</span>
+              <span>Self-hosted hoặc Cloud riêng</span>
+            </div>
+
+            <p class="plan-includes">Bao gồm Professional, cộng thêm:</p>
+            <ul class="plan-feature-list">
+              <li>150 workflow hoạt động</li>
+              <li>Phân quyền nhóm và môi trường riêng</li>
+              <li>Dashboard theo dõi execution</li>
+              <li>Tích hợp CRM, Email, Google Sheet, API</li>
+              <li>Hỗ trợ triển khai theo quy trình nội bộ</li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <div class="plan-top">
+              <h3>Enterprise</h3>
+              <p class="plan-desc">Dành cho tổ chức cần hạ tầng riêng, bảo mật và tuân thủ nâng cao.</p>
+            </div>
+
+            <p class="price enterprise-price">Liên hệ</p>
+
+            <div class="execution-box custom-execution">
+              <strong>Tuỳ chỉnh</strong>
+              <span>số lượng workflow<br>executions</span>
+            </div>
+
+            <a href="#contact" class="card-btn">Liên hệ sales</a>
+
+            <div class="deploy-row">
+              <span class="deploy-icon">☁</span>
+              <span>Cloud riêng hoặc Self-hosted</span>
+            </div>
+
+            <p class="plan-includes">Bao gồm Business, cộng thêm:</p>
+            <ul class="plan-feature-list">
+              <li>Không giới hạn workflow theo nhu cầu</li>
               <li>AI Agent tùy chỉnh chuyên sâu</li>
               <li>Chuyên gia đồng hành triển khai</li>
               <li>Hạ tầng cloud riêng biệt</li>
               <li>SLA cam kết uptime 99.9%</li>
             </ul>
-
-            <a href="#contact" class="card-btn">Liên hệ</a>
           </div>
         </div>
       </div>
@@ -221,6 +293,7 @@
               <h3>So sánh tính năng</h3>
               <span>Starter</span>
               <span>Professional</span>
+              <span>Business</span>
               <span>Enterprise</span>
             </div>
 
@@ -228,6 +301,7 @@
               <span class="feature-name">Giá</span>
               <span>2.500.000đ/tháng</span>
               <span>4.200.000đ/tháng</span>
+              <span>7.900.000đ/tháng</span>
               <span>Liên hệ</span>
             </div>
 
@@ -235,6 +309,7 @@
               <span class="feature-name">Execution mỗi tháng</span>
               <span>2.500</span>
               <span>15.000</span>
+              <span>40.000</span>
               <span>Theo nhu cầu</span>
             </div>
 
@@ -242,11 +317,13 @@
               <span class="feature-name">AI Agent</span>
               <span>Cơ bản</span>
               <span>Nâng cao</span>
+              <span>Nâng cao theo phòng ban</span>
               <span>Tùy chỉnh riêng</span>
             </div>
 
             <div class="compare-row">
               <span class="feature-name">Tích hợp CRM, Email, Google Sheet</span>
+              <span class="check-mark">✓</span>
               <span class="check-mark">✓</span>
               <span class="check-mark">✓</span>
               <span class="check-mark">✓</span>
@@ -256,6 +333,7 @@
               <span class="feature-name">Hỗ trợ kỹ thuật</span>
               <span>Email</span>
               <span>Ưu tiên</span>
+              <span>Ưu tiên 24/7</span>
               <span>Riêng cho doanh nghiệp</span>
             </div>
 
@@ -263,6 +341,7 @@
               <span class="feature-name">Tư vấn triển khai</span>
               <span>Không</span>
               <span>Có</span>
+              <span>Có theo quy trình</span>
               <span>Có chuyên gia đồng hành</span>
             </div>
           </div>
@@ -279,36 +358,84 @@
 
         <div class="benefits-grid" id="benefitsGrid">
           <div class="benefit-card">
-            <div class="icon" role="img" aria-label="Kết nối">🔗</div>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <circle cx="6" cy="12" r="2.5"></circle>
+                <circle cx="18" cy="6" r="2.5"></circle>
+                <circle cx="18" cy="18" r="2.5"></circle>
+                <path d="M8.2 10.9 15.8 7.1M8.2 13.1l7.6 3.8"></path>
+              </svg>
+            </div>
             <h3>Kết nối hơn 1000 ứng dụng</h3>
             <p>Kết nối CRM, Google Sheet, Email Marketing, Zalo, Slack, API và nhiều nền tảng khác.</p>
           </div>
 
           <div class="benefit-card">
-            <div class="icon" role="img" aria-label="Tự động hóa">⚙️</div>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M4 7h5l2 3h9"></path>
+                <path d="M4 17h5l2-3h9"></path>
+                <circle cx="4" cy="7" r="2"></circle>
+                <circle cx="20" cy="10" r="2"></circle>
+                <circle cx="4" cy="17" r="2"></circle>
+                <circle cx="20" cy="14" r="2"></circle>
+              </svg>
+            </div>
             <h3>Tự động hóa quy trình</h3>
             <p>Tự động xử lý dữ liệu, gửi email, cập nhật khách hàng và tạo báo cáo định kỳ.</p>
           </div>
 
           <div class="benefit-card">
-            <div class="icon" role="img" aria-label="AI">🤖</div>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <rect x="5" y="7" width="14" height="11" rx="3"></rect>
+                <path d="M12 7V4"></path>
+                <path d="M8.5 12h.01M15.5 12h.01"></path>
+                <path d="M9 16h6"></path>
+              </svg>
+            </div>
             <h3>Tích hợp AI Agent</h3>
             <p>Kết hợp AI để phân tích dữ liệu, trả lời khách hàng và hỗ trợ ra quyết định nhanh hơn.</p>
           </div>
           <div class="benefit-card">
-            <div class="icon" role="img" aria-label="Tiết kiệm thời gian">⏱️</div>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <circle cx="12" cy="13" r="7"></circle>
+                <path d="M9 3h6"></path>
+                <path d="M12 13V9"></path>
+                <path d="m12 13 3 2"></path>
+              </svg>
+            </div>
             <h3>Tiết kiệm thời gian</h3>
             <p>Giảm thao tác thủ công, giúp đội ngũ tập trung vào công việc quan trọng hơn.</p>
           </div>
 
           <div class="benefit-card">
-            <div class="icon" role="img" aria-label="Tiết kiệm chi phí">💰</div>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M5 18h14"></path>
+                <path d="M7 18V9"></path>
+                <path d="M12 18V5"></path>
+                <path d="M17 18v-6"></path>
+                <path d="M8 9l4-4 4 7"></path>
+              </svg>
+            </div>
             <h3>Giảm chi phí nhân sự</h3>
             <p>Tối ưu nguồn lực bằng cách tự động hóa các tác vụ lặp lại hằng ngày.</p>
           </div>
 
           <div class="benefit-card">
-            <div class="icon" role="img" aria-label="Theo dõi">📊</div>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M4 19V5"></path>
+                <path d="M4 19h16"></path>
+                <path d="m7 15 3-3 3 2 5-6"></path>
+                <circle cx="7" cy="15" r="1.5"></circle>
+                <circle cx="10" cy="12" r="1.5"></circle>
+                <circle cx="13" cy="14" r="1.5"></circle>
+                <circle cx="18" cy="8" r="1.5"></circle>
+              </svg>
+            </div>
             <h3>Dễ theo dõi hiệu quả</h3>
             <p>Theo dõi workflow, execution và hiệu quả vận hành qua hệ thống rõ ràng.</p>
           </div>
@@ -386,8 +513,13 @@
       <div class="container">
         <div class="cta-box">
           <div class="cta-content">
+            <span class="cta-kicker">Sẵn sàng tự động hóa?</span>
             <h2 id="contact-heading">Đủ trực quan để nhìn rõ. Đủ mạnh để triển khai.</h2>
             <p>Bắt đầu với một workflow quan trọng, đo hiệu quả thật và mở rộng dần sang CRM, marketing, vận hành, báo cáo hoặc AI Agent.</p>
+            <div class="cta-links">
+              <a href="#pricing" class="btn primary">Xem bảng giá</a>
+              <a href="#faq" class="btn secondary">Xem FAQ</a>
+            </div>
           </div>
 
           <form class="contact-form" id="contactForm" aria-label="Form liên hệ tư vấn">
@@ -412,8 +544,45 @@
   </main>
 
   <footer class="footer" role="contentinfo">
-    <div class="container">
-      <p>© 2026 n8n Automation Vietnam. All rights reserved.</p>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" aria-label="n8n Automation Vietnam">
+          <svg class="logo-icon" viewBox="0 0 64 28" aria-hidden="true" focusable="false">
+            <circle cx="8" cy="16" r="4"></circle>
+            <circle cx="24" cy="16" r="4"></circle>
+            <circle cx="40" cy="8" r="4"></circle>
+            <circle cx="52" cy="20" r="4"></circle>
+            <path d="M12 16H20M28 16L36 10M44 10L50 17M44 8H56"></path>
+          </svg>
+          <span>n8n</span>
+        </a>
+        <p>Automation without limits cho doanh nghiệp Việt Nam.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Sản phẩm</h3>
+        <a href="#pricing">Bảng giá</a>
+        <a href="#compare">So sánh gói</a>
+        <a href="#features">Tích hợp</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Giải pháp</h3>
+        <a href="#features">AI Agent</a>
+        <a href="#features">CRM &amp; Marketing</a>
+        <a href="#features">Vận hành nội bộ</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Hỗ trợ</h3>
+        <a href="#faq">Câu hỏi thường gặp</a>
+        <a href="#contact">Liên hệ tư vấn</a>
+        <a href="#contact">Triển khai doanh nghiệp</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 n8n Automation Vietnam. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 

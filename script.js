@@ -7,6 +7,7 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx54jQLudP7Ek
 // FETCH NỘI DUNG TỪ GOOGLE SHEETS (CMS)
 // =============================================
 function loadContent() {
+  return;
   if (GOOGLE_SCRIPT_URL === "YOUR_GOOGLE_SCRIPT_URL") return;
 
   fetch(GOOGLE_SCRIPT_URL)
