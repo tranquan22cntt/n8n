@@ -25,10 +25,11 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-  <link rel="preload" as="image" href="assets/hero-lightning.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/hero-lightning-1600.jpg" media="(min-width: 601px)" />
+  <link rel="preload" as="image" href="assets/hero-lightning-960.jpg" media="(max-width: 600px)" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -85,10 +86,13 @@
       <div class="hero-art" aria-hidden="true">
         <span class="hero-smoke smoke-orange"></span>
         <span class="hero-smoke smoke-blue"></span>
+        <span class="hero-smoke smoke-violet"></span>
       </div>
       <!-- Animated color orbs like n8n.io -->
       <div class="hero-orb orb-1" aria-hidden="true"></div>
       <div class="hero-orb orb-2" aria-hidden="true"></div>
+      <div class="hero-orb orb-3" aria-hidden="true"></div>
+      <div class="hero-orb orb-4" aria-hidden="true"></div>
       <div class="container hero-shell">
         <div class="hero-copy">
           <span class="badge">AI Workflow Automation cho doanh nghiệp Việt Nam</span>
