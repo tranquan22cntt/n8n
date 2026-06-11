@@ -10,7 +10,6 @@ Landing page gioi thieu dich vu tu dong hoa quy trinh bang n8n, duoc thiet ke th
 ## Demo
 
 - Website: [n8n-eight-pink.vercel.app](https://n8n-eight-pink.vercel.app/)
-- Repository: [github.com/tranngocminhquan/n8n](https://github.com/tranngocminhquan/n8n)
 
 ## Noi Dung Chinh
 
