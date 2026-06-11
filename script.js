@@ -123,3 +123,81 @@ if (contactForm && submitBtn) {
       });
   });
 }
+
+// =============================================
+// TẢI NỘI DUNG TỪ GOOGLE SHEETS (CMS)
+// Admin sửa Google Sheets → trang tự cập nhật khi reload
+// =============================================
+function loadContent() {
+  if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL === "YOUR_GOOGLE_SCRIPT_URL") return;
+
+  fetch(GOOGLE_SCRIPT_URL)
+    .then(function (res) { return res.json(); })
+    .then(function (data) {
+      if (data.pricing  && data.pricing.length)  renderPricing(data.pricing);
+      if (data.benefits && data.benefits.length) renderBenefits(data.benefits);
+      if (data.faq      && data.faq.length)      renderFAQ(data.faq);
+    })
+    .catch(function (err) {
+      console.info("Dùng nội dung mặc định:", err.message);
+    });
+}
+
+function renderPricing(plans) {
+  var grid = document.getElementById("pricingGrid");
+  if (!grid) return;
+
+  var html = "";
+  plans.forEach(function (plan) {
+    var isPopular = String(plan.popular || "").toLowerCase() === "có";
+    var features  = String(plan.features || "").split("|").filter(function (f) { return f.trim(); });
+
+    html += '<div class="price-card' + (isPopular ? " popular" : "") + '">';
+    if (isPopular) html += '<div class="popular-label">Phổ biến</div>';
+    html += '<div class="plan-top"><h3>' + plan.name + '</h3>';
+    html += '<p class="plan-desc">' + (plan.note || "") + "</p></div>";
+    html += '<p class="price">' + (plan.price || "Liên hệ") + "</p>";
+    html += '<a href="#contact" class="card-btn">' + (plan.button || "Đăng ký") + "</a>";
+    if (features.length) {
+      html += '<p class="plan-includes">Gói này bao gồm:</p><ul class="plan-feature-list">';
+      features.forEach(function (f) { html += "<li>" + f.trim() + "</li>"; });
+      html += "</ul>";
+    }
+    html += "</div>";
+  });
+
+  grid.innerHTML = html;
+}
+
+function renderBenefits(items) {
+  var grid = document.getElementById("benefitsGrid");
+  if (!grid) return;
+
+  var html = "";
+  items.forEach(function (item) {
+    html += '<div class="benefit-card">';
+    html += '<div class="icon" aria-hidden="true">' + (item.icon || "") + "</div>";
+    html += "<h3>" + (item.title || "") + "</h3>";
+    html += "<p>" + (item.desc  || "") + "</p>";
+    html += "</div>";
+  });
+
+  grid.innerHTML = html;
+}
+
+function renderFAQ(items) {
+  var list = document.getElementById("faqList");
+  if (!list) return;
+
+  var html = "";
+  items.forEach(function (item) {
+    html += '<div class="faq-item">';
+    html += "<h3>" + (item.question || "") + "</h3>";
+    html += "<p>"  + (item.answer   || "") + "</p>";
+    html += "</div>";
+  });
+
+  list.innerHTML = html;
+}
+
+loadContent();
